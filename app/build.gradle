@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "pl.naniewicz.mvisample"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    //Kotlin
+    implementation libs.kotlin
+
+    //Anko Commons
+    implementation libs.ankoCommons
+    implementation libs.ankoCommonsSupportV7
+    implementation libs.ankoCommonsSupportV4
+
+    // Support
+    implementation libs.appCompat
+    implementation libs.recyclerView
+    implementation libs.constraintLayout
+    implementation libs.cardView
+    implementation libs.design
+    implementation libs.constraintLayout
+
+    //ViewModel
+    implementation libs.lifecycleExtensions
+
+    // Dagger
+    implementation libs.dagger
+    implementation libs.daggerAndroid
+    implementation libs.daggerAndroidSupport
+    kapt proc.dagger
+    kapt proc.daggerAndroid
+    compileOnly proc.javaxAnnotation
+
+    //RxJava
+    implementation libs.rxJava2
+    implementation(libs.rxKotlin2) {
+        exclude module: 'rxjava'
+        exclude module: 'kotlin-stdlib'
+    }
+    implementation(libs.rxAndroid2) {
+        exclude module: 'rxjava'
+    }
+    //RxBindings
+    implementation libs.rxBinding
+    implementation libs.rxBindingKotlinExt
+    implementation libs.rxBindingSupportV4
+    implementation libs.rxBindingSupportV4KotlinExt
+    implementation libs.rxBindingSupportV7
+    implementation libs.rxBindingSupportV7KotlinExt
+
+    //mpb
+    implementation libs.materialProgressBar
+
+    // Timber
+    implementation libs.timber
+
+    // Unit testing
+    testImplementation(test.junit)
+    testImplementation test.mockito
+    testImplementation test.mockitoKotlin
+
+    //Leak canary
+    debugImplementation libs.leakCanaryDebug
+    releaseImplementation libs.leakCanaryRelease
+}

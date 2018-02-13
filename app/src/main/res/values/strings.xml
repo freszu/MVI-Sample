@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MVI Sample</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="activity_duck">Duck activity</string>
+    <string name="activity_test">Test activity</string>
+    <string name="action_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_email">Email address</string>
+    <string name="msg_log_in_to_your_account">Log in to your account</string>
+    <string name="login_activity">Login</string>
+    <string name="logged_in_successfully">Logged in!</string>
+    <string name="error_email_incorrect">Incorrect email address…</string>
+    <string name="error_password_to_short">Password is too short…</string>
+    <string name="error_incorrect_login_credentials">Incorrect login credentials</string>
+    <string name="error_unknown_error">Unknown error…</string>
+    <string name="rotate_by">Rotate by…</string>
+    <string name="rotate_left">Rotate left</string>
+    <string name="rotate_right">Rotate right</string>
+</resources>
