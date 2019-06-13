@@ -38,7 +38,7 @@ ext {
             timber                     : "com.jakewharton.timber:timber:4.6.0",
             leakCanaryDebug            : "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion",
             leakCanaryRelease          : "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion",
-            materialProgressBar        : "me.zhanghai.android.materialprogressbar:library:1.4.2",
+            materialProgressBar        : "me.zhanghai.android.materialprogressbar:library:1.6.1",
     ]
 
     proc = [
